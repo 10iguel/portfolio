@@ -1,30 +1,35 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
 const EXPERIENCIE = [
-  {
-    date: "Actualmente...",
-    title: "Creador de Contenido",
-    company: "Twitch",
-    description:
-      "Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
-    link: "https://twitch.tv/midudev",
-  },
-  {
-    date: "Septiembre 2022",
-    title: "Principal Frontend Engineer",
-    company: "Adevinta Spain",
-    description:
-      "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
-  },
+    {
+        date: "Present...",
+        title: "Junior Software Developer",
+        company: "EverybodyMath",
+        description:
+            "Collaborating to design interactive websites for students involves utilizing technologies such as React, JavaScript, Firebase, CSS, and TypeScript. This collaborative effort aims to enhance the user experience and functionality of the websites. Additionally, there is a focus on continuous improvement and innovation, which includes leveraging tools like Material UI and Google Charts to enhance the aesthetics and data visualization aspects of the websites.",
+        link: "https://everybodymath.com/",
+    },
+    {
+        date: "April 2024",
+        title: "Teaching Assistant in Computer Science",
+        company: "Ensign College",
+        description: "Assisting on an introductory class for new computer science students deploying Java, JUnit, Maven, Git, and GitHub Actions, reducing manual oversight by 30%. Developing a simplified Git workflow for students. Leading a team to create a college app with TypeScript, CSS, and JavaScript, featuring an admin portal, and implementing Netlify for accessibility. Counseling students to foster a conducive Java learning environment during class and office hours."
+    },
+    {
+        date: "April 2022",
+        title: "Junior Software Developer",
+        company: "Devsu",
+        description: "Integrated payment processing into B2B web apps, boosting productivity by 15%. Developed multiple websites across four projects utilizing Typescript, React, and Next.js. Collaborated within a global team using SCRUM methodology with Jira. Emphasized comprehensive code coverage, striving for 100% through Next.js implementation and Test-Driven Development with Testing Library."
+    },
 ]
 ---
 
 <ol class="relative mt-16">
-  {
-    EXPERIENCIE.map((experiencie) => (
-      <li class="">
-        <ExperienceItem {...experiencie} />
-      </li>
-    ))
-  }
+    {
+        EXPERIENCIE.map((experiencie) => (
+                <li class="">
+                    <ExperienceItem {...experiencie}/>
+                </li>
+        ))
+    }
 </ol>
