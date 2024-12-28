@@ -1,118 +1,116 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import TypeScript from "./icons/Typescript.astro"
-import Three_js from "./icons/Threejs.astro"
-import Javascript from "./icons/Javascript.astro"
-import Github_Actions from "./icons/Github-Actions.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
+import GitHub from './icons/GitHub.astro';
+import NextJS from './icons/NextJS.astro';
+import Tailwind from './icons/Tailwind.astro';
+import TypeScript from './icons/Typescript.astro';
+import Three_js from './icons/Threejs.astro';
+import Javascript from './icons/Javascript.astro';
+import Github_Actions from './icons/Github-Actions.astro';
+import Link from './icons/Link.astro';
+import LinkButton from './LinkButton.astro';
 
 const TAGS = {
     NEXT: {
-        name: "Next.js",
-        class: "bg-black text-white",
-        icon: NextJS,
+        name: 'Next.js',
+        class: 'bg-black text-white',
+        icon: NextJS
     },
     TAILWIND: {
-        name: "Tailwind CSS",
-        class: "bg-[#003159] text-white",
-        icon: Tailwind,
+        name: 'Tailwind CSS',
+        class: 'bg-[#003159] text-white',
+        icon: Tailwind
     },
     TYPESCRIPT: {
-        name: "TypeScript",
-        class: "bg-[#76A4D5] text-white",
-        icon: TypeScript,
+        name: 'TypeScript',
+        class: 'bg-[#76A4D5] text-white',
+        icon: TypeScript
     },
     THREE_JS: {
-        name: "Three.js",
-        class: "bg-white text-black",
-        icon: Three_js,
+        name: 'Three.js',
+        class: 'bg-white text-black',
+        icon: Three_js
     },
     JAVASCRIPT: {
-        name: "JavaScript",
-        class: "bg-black text-white",
-        icon: Javascript,
+        name: 'JavaScript',
+        class: 'bg-black text-white',
+        icon: Javascript
     },
     GITHUB_ACTIONS: {
-        name: "Github Actions",
-        class: "bg-white text-black",
+        name: 'Github Actions',
+        class: 'bg-white text-black',
         icon: Github_Actions
-    },
-}
+    }
+};
 const PROJECTS = [
     {
-        title: "Survival Guide Portal- Mobile App",
+        title: 'Survival Guide Portal- Mobile App',
         description:
-            "Collaborate in development of a mobile app design specifically for students at Ensign College operating TypeScript, Next.js, Tailwind and Material UI.",
-        link: "https://main--heartfelt-faun-92893c.netlify.app/",
-        github: "https://github.com/Ensign-College/survival-admin-portal",
-        image: "projects/survival-admin.webp",
-        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TYPESCRIPT],
+            'Collaborate in development of a mobile app design specifically for students at Ensign College operating TypeScript, Next.js, Tailwind and Material UI.',
+        link: 'https://main--heartfelt-faun-92893c.netlify.app/login',
+        github: 'https://github.com/Ensign-College/survival-admin-portal',
+        image: '/portfolio/projects/survival-admin.webp',
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TYPESCRIPT]
     },
     {
-        title: "Earth 3D Model",
-        description:"3D model of the Earth using Three.js and TypeScript. The model is interactive and can be rotated and zoomed in.",
-        link: "https://10iguel.github.io/3DModelEarth/",
-        image: "projects/3DModeEarth.webp",
-        tags: [TAGS.THREE_JS, TAGS.JAVASCRIPT, TAGS.GITHUB_ACTIONS],
-    },
-]
+        title: 'Earth 3D Model',
+        description: '3D model of the Earth using Three.js and TypeScript. The model is interactive and can be rotated and zoomed in.',
+        link: 'https://10iguel.github.io/3DModelEarth/',
+        image: '/portfolio/projects/3DModeEarth.webp',
+        tags: [TAGS.THREE_JS, TAGS.JAVASCRIPT, TAGS.GITHUB_ACTIONS]
+    }
+];
 ---
 
 <div class="flex flex-col gap-y-16">
     {
-        PROJECTS.map(({image, title, description, tags, link, github}) => (
-                <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-                    <div class="w-full md:w-1/2">
-                        <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-                            <img alt="Project Image"
-                                 class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-                                 loading="lazy" src={image}/>
-                        </div>
+        PROJECTS.map(({ image, title, description, tags, link, github }) => (
+            <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+                <div class="w-full md:w-1/2">
+                    <div
+                        class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                        <img alt="Project Image"
+                             class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                             loading="lazy" src={image} />
                     </div>
+                </div>
 
-                    <div class="w-full md:w-1/2 md:max-w-lg">
-                        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-                            {title}
-                        </h3>
-                        <div class="flex flex-wrap mt-2">
-                            <ul class="flex flex-row mb-2 gap-x-2">
-                                {tags.map((tag) => (
-                                        <li>
+                <div class="w-full md:w-1/2 md:max-w-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                        {title}
+                    </h3>
+                    <div class="flex flex-wrap mt-2">
+                        <ul class="flex flex-row mb-2 gap-x-2">
+                            {tags.map((tag) => (
+                                <li>
               <span
-                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
               >
                 <tag.icon class="size-4"/>
                   {tag.name}
               </span>
-                                        </li>
-                                ))}
-                            </ul>
+                                </li>
+                            ))}
+                        </ul>
 
-                            <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-                            <footer class="flex items-end justify-start mt-4 gap-x-4">
-                                {github && (
-                                        <LinkButton href={github}>
-                                            <GitHub class="size-6"/>
-                                            Code
+                        <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+                        <footer class="flex items-end justify-start mt-4 gap-x-4">
+                            {github && (
+                                <LinkButton href={github}>
+                                    <GitHub class="size-6" />
+                                    Code
 
-                                        </LinkButton>
-                                )}
-                                {link && (
-                                        <LinkButton href={link}>
-                                            <Link class="size-4"/>
-                                            Preview
-                                        </LinkButton>
-                                )}
-                            </footer>
-                        </div>
+                                </LinkButton>
+                            )}
+                            {link && (
+                                <LinkButton href={link}>
+                                    <Link class="size-4" />
+                                    Preview
+                                </LinkButton>
+                            )}
+                        </footer>
                     </div>
-                </article>
+                </div>
+            </article>
         ))
     }
 </div>
-
-
-
